@@ -1,0 +1,40 @@
+.hero {
+	background-image: url("img/hero-bg.png");
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.hero-block {
+	max-width: 500px;
+	margin-right: 60px;
+	display: flex;
+	flex-direction: column;
+	font-family: 'Proxima Nova Th', sans-serif;
+}
+
+.hero-block__title {
+	color: #fff;
+	font-size: 80px;
+	margin-bottom: 30px;
+}
+
+.details-btn {
+	width: 150px;
+	cursor: pointer;
+	height: 50px;
+	background-color: black;
+	border: none;
+	color: #Fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	align-self: flex-end;
+	&:hover {
+		transition: all .2s;
+		background-color: #fff;
+		color: #000;
+		border: 1px solid black;
+	}
+}
