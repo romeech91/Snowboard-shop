@@ -1,0 +1,30 @@
+.features {
+	padding: 125px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.title-features {
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.features__list {
+	display: flex;
+	justify-content: space-around;
+}
+.features__block {
+	width: 220px;
+}
+.features__item-bg {
+	width: 220px;
+	height: 160px;
+}
+
+.section-subtitle {
+	text-align: center;
+	font-size: 48px;
+	margin-bottom: 40px;
+}

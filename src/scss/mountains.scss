@@ -2,13 +2,28 @@
 	background-image: url("img/second-bg.png");
 	background-size: cover;
 	background-position: center;
+	padding: 100px 0;
+	min-height: 800px;
 }
 
 .mountains-text {
-	width: 50%;
+	width: 60%;
 	color: #fff;
-	font-size: 14px;
+	font-size: 15px;
 	font-family: 'Proxima Nova Lt', sans-serif;
 	text-transform: none;
 	line-height: 30px;
+}
+
+.mountains-article {
+	margin-bottom: 30px;
+}
+
+.mount-title {
+	margin-bottom: 55px;
+	width: 50%;
+}
+
+.copyright {
+	font-size: 32px;
 }
