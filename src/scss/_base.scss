@@ -46,6 +46,16 @@ body {
 	width: 90%;
 }
 
-.main__title {
+.main-title {
 	font-size: 48px;
+	font-family: 'Proxima Nova Th', sans-serif;
+	&--white {
+		color: #fff;
+		font-size: 48px;
+		font-family: 'Proxima Nova Th', sans-serif;
+	}
+}
+
+.subtitle {
+	font-size: 14px;
 }
