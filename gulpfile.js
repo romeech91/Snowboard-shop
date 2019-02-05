@@ -24,6 +24,9 @@ let path = {
 	src: {
 		html: 'src/*.html',
 		js: 'src/index.js',
+		animate: 'src/animate.css',
+		slider: 'src/siema.min.js',
+		wowjs: 'src/wow.min.js',
 		style: 'src/main.scss',
 		img: 'src/img/**/*.*',
 		fonts: 'src/fonts/**/*.*'
@@ -95,12 +98,30 @@ gulp.task('fonts', function() {
 		.pipe(gulp.dest(path.build.fonts))
 });
 
+gulp.task('slider-transfer', function() {
+	gulp.src(path.src.slider)
+		.pipe(gulp.dest(path.build.js))
+});
+
+gulp.task('animate-css', function () {
+	gulp.src(path.src.animate)
+		.pipe(gulp.dest(path.build.js))
+});
+
+gulp.task('wowjs', function () {
+	gulp.src(path.src.wowjs)
+		.pipe(gulp.dest(path.build.js))
+});
+
 gulp.task('build', [
 	'html',
 	'js',
 	'style',
 	'fonts',
-	'img'
+	'img',
+	'slider-transfer',
+	'animate-css',
+	'wowjs'
 ]);
 
 gulp.task('watch', function(){

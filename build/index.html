@@ -5,7 +5,16 @@
 	<title>Snowboard shop</title>
 	<link rel="stylesheet" href="./fonts/stylesheet.css">
 	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="animate.css">
 	<script src="index.js" defer></script>
+	<script src="siema.min.js"></script>
+	<script>
+		new Siema();
+	</script>
+	<script src="wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
 </head>
 <body>
 	<div class="wrapper">
@@ -38,21 +47,42 @@
 		</header>
 		<section class="section hero">
 			<div class="hero-block">
-				<h1 class="hero-block__title">Run over everything</h1>
-				<button type="button" class="details-btn">See details</button>
+				<h1 class="hero-block__title wow fadeInDownBig">Run over everything</h1>
+				<button type="button" class="details-btn wow fadeInUp">See details</button>
 			</div>
 		</section>
 		<section class="slider section">
-			<h2 class="main-title">Snowboards</h2>
+			<h2 class="main-title slider-title">Snowboards</h2>
+			<div class="subtitle">Aliquam erat volutpat. Curabitur ut consequat arcu eget laoreet est</div>
 			<div class="section-cross">
 				<img src="img/icons/cross.png" alt="cross icon">
 			</div>
-			<div class="subtitle">Aliquam erat volutpat. Curabitur ut consequat arcu eget laoreet est</div>
+			<div class="slides">
+				<div class="siema">
+					<div class="slide">
+						<img class="'slide__img" src="img/slider/burton_board.png" alt="">
+					</div>
+					<div class="slide">
+						<img src="img/slider/custom_board.png" alt="" class="slide__img">
+					</div>
+					<div class="slide">
+						<img src="img/slider/girl-teddy_board.png" alt="" class="slide__img">
+					</div>
+					<div class="slide">
+						<img src="img/slider/hate_board.png" alt="" class="slide__img">
+					</div>
+					<div class="slide">
+						<img src="img/slider/snake_board.png" alt="" class="slide_img">
+					</div>
+				</div>
+				<button class="prev">PREV</button>
+				<button class="next">NEXT</button>
+			</div>
 		</section>
 		<section class="mountains section">
 			<div class="container">
-				<h2 class="main-title--white mount-title">The mountains snowboarding<span class="copyright">®</span></h2>
-				<div class="mountains-text">
+				<h2 class="main-title--white mount-title wow bounceInLeft">The mountains snowboarding<span class="copyright">®</span></h2>
+				<div class="mountains-text wow bounceInUp">
 					<div class="mountains-article">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt auctor facilisis. Nam massa dui, imperdiet et mi ut, sagittis viverra odio. Duis et lectus eu enim gravida vulputate nec eget nisi. Nunc ultrices velit blandit, dapibus lacus in, feugiat erat. Donec non porttitor augue, sit amet lacinia purus. Nulla fringilla quam est, luctus dapibus odio suscipit ut. Vivamus et lectus a nunc fringilla volutpat. Morbi sed congue sem.</div>
 					<div class="mountains-article">Aliquam erat volutpat. Curabitur ut consequat arcu, eget laoreet est. Vivamus semper nibh sit amet libero hendrerit luctus. Fusce non bibendum lorem. Fusce laoreet risus eget tortor lobortis egestas. Etiam tempus quam sed felis viverra scelerisque. Integer fringilla libero risus, vel euismod turpis auctor ac. Proin elementum aliquet libero a dapibus. Mauris et tempor dolor.</div>
 				</div>
@@ -65,25 +95,25 @@
 					<img src="img/icons/cross.png" alt="cross icon">
 				</div>
 				<ul class="features__list">
-					<li class="features__item">
+					<li class="features__item wow fadeInDown">
 						<div class="features__block">
 							<img src="img/features/config.png" alt="" class="features__item-bg">
 							<span class="features__block-text">Born Identity: Bringing Burton Hardgoods to Life</span>
 						</div>
 					</li>
-					<li class="features__item">
+					<li class="features__item wow fadeInDown">
 						<div class="features__block">
 							<img src="img/features/snow.png" alt="" class="features__item-bg">
 							<span class="features__block-text">Jeremy Jones: On That Street Grind</span>
 						</div>
 					</li>
-					<li class="features__item">
+					<li class="features__item wow fadeInDown">
 						<div class="features__block">
 							<img src="img/features/street-grind.png" alt="" class="features__item-bg">
 							<span class="features__block-text">Burton’s Tokyo Rail Days Recap</span>
 						</div>
 					</li>
-					<li class="features__item">
+					<li class="features__item wow fadeInDown">
 						<div class="features__block">
 							<img src="img/features/tokyo-rail.png" alt="" class="features__item-bg">
 							<span class="features__block-text">Burton’s Tokyo Rail Days Preview</span>
@@ -127,27 +157,27 @@
 						<li class="menu__item socials">
 							<ul class="socials__list">
 								<li class="socials__item"><a href="#0" class="socials__link">
-									<img src="./img/icons/socials/facebook.svg" alt="" class="socials__icon">
+									<img src="./img/icons/socials/facebook.svg" alt="facebook icon" class="socials__icon">
 								</a>
 								</li>
 								<li class="socials__item"><a href="#0" class="socials__link">
-									<img src="./img/icons/socials/twitter.svg" alt="" class="socials__icon">
+									<img src="./img/icons/socials/twitter.svg" alt="twitter icon" class="socials__icon">
 								</a>
 								</li>
 								<li class="socials__item"><a href="#0" class="socials__link">
-									<img src="./img/icons/socials/insta.svg" alt="" class="socials__icon">
+									<img src="./img/icons/socials/insta.svg" alt="instagram icon" class="socials__icon">
 								</a>
 								</li>
 								<li class="socials__item"><a href="#0" class="socials__link">
-									<img src="./img/icons/socials/google.svg" alt="" class="socials__icon">
+									<img src="./img/icons/socials/google.svg" alt="google icon" class="socials__icon">
 								</a>
 								</li>
 								<li class="socials__item"><a href="#0" class="socials__link">
-									<img src="./img/icons/socials/telegram.svg" alt="" class="socials__icon">
+									<img src="./img/icons/socials/telegram.svg" alt="telegram icon" class="socials__icon">
 								</a>
 								</li>
 								<li class="socials__item"><a href="#0" class="socials__link">
-									<img src="./img/icons/socials/youtube.svg" alt="" class="socials__icon">
+									<img src="./img/icons/socials/youtube.svg" alt="youtube icon" class="socials__icon">
 								</a>
 								</li>
 							</ul>
