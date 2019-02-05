@@ -24,6 +24,7 @@ let path = {
 	src: {
 		html: 'src/*.html',
 		js: 'src/index.js',
+		preloader: 'src/preloader.js',
 		animate: 'src/animate.css',
 		slider: 'src/siema.min.js',
 		wowjs: 'src/wow.min.js',
@@ -108,6 +109,11 @@ gulp.task('animate-css', function () {
 		.pipe(gulp.dest(path.build.js))
 });
 
+gulp.task('preloader', function () {
+	gulp.src(path.src.preloader)
+		.pipe(gulp.dest(path.build.js))
+});
+
 gulp.task('wowjs', function () {
 	gulp.src(path.src.wowjs)
 		.pipe(gulp.dest(path.build.js))
@@ -121,7 +127,8 @@ gulp.task('build', [
 	'img',
 	'slider-transfer',
 	'animate-css',
-	'wowjs'
+	'wowjs',
+	'preloader'
 ]);
 
 gulp.task('watch', function(){
