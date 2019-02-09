@@ -3,6 +3,10 @@
 	height: 395px;
 	padding: 78px 60px;
 	background-color: #000;
+	@include tablets {
+		padding: 40px 0;
+		height: 330px;
+	}
 }
 
 .products__list {
@@ -37,6 +41,9 @@
 		-o-transition: .3s time;
 		transition: .3s time;
 	}
+	@include tablets {
+		font-size: 12px;
+	}
 }
 
 .item-title {
@@ -45,6 +52,9 @@
 	margin-bottom: 15px;
 	line-height: 30px;
 	font-family: 'Proxima Nova Th', sans-serif;
+	@include tablets {
+		font-size: 14px;
+	}
 }
 
 .footer__bottom-side {
@@ -63,6 +73,9 @@
 		padding-left: 14px;
 		width: 162px;
 		border: none;
+		@include tablets {
+			height: 35px;
+		}
 	}
 	&__button {
 		height: 42px;
@@ -71,6 +84,10 @@
 		border: none;
 		margin-left: -4px;
 		font-weight: bold;
+		@include tablets {
+			height: 35px;
+			margin-bottom: 30px;
+		}
 	}
 
 	margin-bottom: 60px;

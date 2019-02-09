@@ -12,11 +12,24 @@
 	width: 100%;
 }
 
+.header__item {
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
 .header__left {
 	width: 50%;
 	display: flex;
 	align-items: center;
+	@include tablets-port {
+		width: 90%;
+	}
+	@include  tablets {
+		width: 165%;
+	}
 }
+
 .header__right {
 	width: 50%;
 	display: flex;

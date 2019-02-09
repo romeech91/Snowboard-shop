@@ -38,6 +38,9 @@ body {
 .container {
 	width: 980px;
 	margin: 0 auto;
+	@include tablets-port {
+		width: 90%;
+	}
 }
 
 .header-container {
@@ -65,4 +68,7 @@ body {
 	text-align: center;
 	font-size: 48px;
 	margin-bottom: 65px;
+	@include tablets {
+		margin-bottom: 15px;
+	}
 }

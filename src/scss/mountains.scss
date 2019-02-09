@@ -13,6 +13,9 @@
 	font-family: 'Proxima Nova Lt', sans-serif;
 	text-transform: none;
 	line-height: 30px;
+	@include tablets {
+		width: 70%;
+	}
 }
 
 .mountains-article {
@@ -22,6 +25,9 @@
 .mount-title {
 	margin-bottom: 55px;
 	width: 50%;
+	@include tablets {
+		width: 100%;
+	}
 }
 
 .copyright {
