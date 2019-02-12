@@ -100,8 +100,8 @@ gulp.task('fonts', function() {
 });
 
 gulp.task('slider-transfer', function() {
-	gulp.src(path.src.slider)
-		.pipe(gulp.dest(path.build.js))
+	gulp.src('src/slick/**/*.*')
+		.pipe(gulp.dest('build/slick/'))
 });
 
 gulp.task('animate-css', function () {

@@ -17,3 +17,19 @@
 	width: 100%;
 	height: 500px;
 }
+
+.slick-slide {
+	filter: grayscale(90%);
+}
+
+.slick-current {
+	filter: grayscale(0%);
+}
+
+.slide__desc {
+	left: -25px;
+	top: 20px;
+	overflow: auto;
+	height: 35px;
+	position: relative;
+}

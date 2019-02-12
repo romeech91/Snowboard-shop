@@ -1,18 +1,30 @@
-const mySiema = new Siema({
-	selector: '.siema',
-	duration: 200,
-	easing: 'ease-out',
-	perPage: 4,
-	startIndex: 0,
-	draggable: true,
-	multipleDrag: true,
-	threshold: 20,
-	loop: true,
-	rtl: false
+$(document).ready(function(){
+	$('.slider__container').slick({
+		centerMode: true,
+		centerPadding: '80px',
+		slidesToShow: 3.5,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					arrows: false,
+					centerMode: true,
+					centerPadding: '40px',
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					arrows: false,
+					centerMode: true,
+					centerPadding: '40px',
+					slidesToShow: 1
+				}
+			}
+		]
+});
 });
 
-let prevBTN = document.querySelector('.prev');
-let nextBTN = document.querySelector('.next');
-
-prevBTN.addEventListener('click', () => mySiema.prev());
-nextBTN.addEventListener('click', () => mySiema.next());
+var currentSlide = $('.slider__container').slick('slickCurrentSlide');
+currentSlide.addClass('current-slide');
