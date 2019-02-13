@@ -1,15 +1,17 @@
+
 $(document).ready(function(){
 	$('.slider__container').slick({
 		centerMode: true,
 		centerPadding: '80px',
 		slidesToShow: 3.5,
+		arrows: true,
 		responsive: [
 			{
 				breakpoint: 768,
 				settings: {
 					arrows: false,
 					centerMode: true,
-					centerPadding: '40px',
+					centerPadding: '75px',
 					slidesToShow: 3
 				}
 			},
@@ -18,13 +20,13 @@ $(document).ready(function(){
 				settings: {
 					arrows: false,
 					centerMode: true,
-					centerPadding: '40px',
-					slidesToShow: 1
+					centerPadding: '50px',
+					slidesToShow: 1,
+					autoplay: true,
+					autoplaySpeed: 1000
 				}
 			}
 		]
 });
 });
 
-var currentSlide = $('.slider__container').slick('slickCurrentSlide');
-currentSlide.addClass('current-slide');

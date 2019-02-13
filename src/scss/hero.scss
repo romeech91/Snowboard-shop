@@ -5,6 +5,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	@include phone-XL {
+		background-position: right;
+	}
 }
 
 .hero-block {
@@ -13,12 +16,24 @@
 	display: flex;
 	flex-direction: column;
 	font-family: 'Proxima Nova Th', sans-serif;
+	@include phone-XL {
+		padding: 0 20px;
+	}
+	@include phone-L {
+		margin: 0;
+	}
 }
 
 .hero-block__title {
 	color: #fff;
 	font-size: 80px;
 	margin-bottom: 30px;
+	@include phone-XL {
+		font-size: 59px;
+	}
+	@include phone-S {
+		font-size: 42px;
+	}
 }
 
 .details-btn {

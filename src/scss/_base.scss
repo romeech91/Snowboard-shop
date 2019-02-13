@@ -28,11 +28,15 @@ body {
 	width: 100%;
 	height: 100%;
 	position: relative;
+	overflow: hidden;
 }
 
 .section {
 	min-height: 100%;
 	height: 650px;
+	@include phone-S {
+		height: 550px;
+	}
 }
 
 .container {
@@ -47,15 +51,24 @@ body {
 	display: flex;
 	margin: 0 auto;
 	width: 90%;
+	@include all_phones {
+		margin: 0;
+	}
 }
 
 .main-title {
 	font-size: 48px;
 	font-family: 'Proxima Nova Th', sans-serif;
+	@include phone-S {
+		font-size: 28px;
+	}
 	&--white {
 		color: #fff;
 		font-size: 48px;
 		font-family: 'Proxima Nova Th', sans-serif;
+		@include phone-S {
+			font-size: 28px;
+		}
 	}
 }
 

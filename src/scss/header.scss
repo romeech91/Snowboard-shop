@@ -5,11 +5,30 @@
 	width: 100%;
 }
 
+.header-logo {
+	@include all_phones {
+		display: none;
+	}
+}
+
 .header__list {
 	display: flex;
 	justify-content: space-around;
 	font-size: 13px;
 	width: 100%;
+	@include all_phones {
+		display: none;
+	}
+}
+
+.header__list--popup {
+	display: flex;
+	top: 57%;
+	position: relative;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 300px;
+	align-items: center;
 }
 
 .header__item {
@@ -68,3 +87,104 @@
 	color: #fff;
 	font-size: 13px;
 }
+
+.hamb-menu {
+	display: none;
+	border: none;
+	z-index: 100;
+	outline: none;
+	width: 70px;
+	height: 70px;
+	background-color: transparent;
+	@include all_phones {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.hamb-menu span {
+	display: block;
+	width: 40px;
+	height: 4px;
+	background-color: #FFffff;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	&:before {
+		position: absolute;
+		display: block;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		content: "";
+		width: 40px;
+		height: 4px;
+		top: 42px;
+		background-color: #fff;
+		-webkit-transition: all .2s ease-in-out;
+		-moz-transition: all .2s ease-in-out;
+		-ms-transition: all .2s ease-in-out;
+		-o-transition: all .2s ease-in-out;
+		transition: all .2s ease-in-out;
+	}
+	&:after {
+		position: absolute;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		display: block;
+		content: "";
+		width: 40px;
+		height: 4px;
+		top: 64px;
+		background-color: #fff;
+		-webkit-transition: all .2s ease-in-out;
+		-moz-transition: all .2s ease-in-out;
+		-ms-transition: all .2s ease-in-out;
+		-o-transition: all .2s ease-in-out;
+		transition: all .2s ease-in-out;
+	}
+}
+
+.hamb-menu--active span {
+	background-color: transparent;
+}
+
+.hamb-menu--active span:before {
+	background-color: #fff;
+	top: 54px;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.hamb-menu--active span:after {
+	background-color: #fff;
+	top: 54px;
+	-webkit-transform: rotate(+45deg);
+	-moz-transform: rotate(+45deg);
+	-ms-transform: rotate(+45deg);
+	-o-transform: rotate(+45deg);
+	transform: rotate(+45deg);
+}
+
+.hidden-menu {
+	display: none;
+	width: 100%;
+	height: 30%;
+	overflow: hidden;
+	background-color: cornflowerblue;
+	position: absolute;
+	&--active {
+		display: block;
+	}
+}
+

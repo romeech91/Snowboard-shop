@@ -1,6 +1,9 @@
 .slider {
 	min-height: 900px;
 	padding: 50px 0;
+	@include phone-S {
+		min-height: 740px;
+	}
 }
 
 .slider-title {
@@ -32,4 +35,38 @@
 	overflow: auto;
 	height: 35px;
 	position: relative;
+	display: none;
+	@include phone-XL {
+		text-align: center;
+		left: 0;
+	}
+}
+
+.slick-next {
+	right: 5%;
+	top: 40%;
+}
+
+.slick-prev {
+	left: 1%;
+	top: 40%;
+	z-index: 100;
+}
+
+.slick-prev:before, .slick-next:before {
+	font-size: 80px;
+	color: grey;
+}
+
+.slick-current .slide__desc {
+	display: block;
+}
+
+.slick-slide img {
+	@include tablets {
+		margin: 0 auto;
+	}
+	@include phone-XL {
+		margin: 0 auto;
+	}
 }
