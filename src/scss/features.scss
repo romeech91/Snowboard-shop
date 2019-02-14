@@ -25,28 +25,64 @@
 
 .features__item {
 	width: 25%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 	@include tablets {
 		width: 50%;
 	}
+
 }
 
 .features__block {
-	width: 90%;
-	height: 60%;
+	width: 220px;
+	height: 160px;
+	margin: 0 auto 20px auto;
 	@include tablets {
 		margin: 0 auto;
-		width: 70%;
+	}
+	@include phone-XL {
+		width: 190px;
+		height: 138px;
+	}
+	@include phone-L {
+		width: 175px;
+		height: 127px;
+	}
+	@include phone-M {
+		width: 160px;
+		height: 116px;
+	}
+	@include phone-S {
+		width: 130px;
+		height: 94px;
 	}
 }
 
 .features__block-text {
 	text-transform: none;
 	line-height: 30px;
-	width: 100%;
+	width: 220px;
+	@include tablets {
+		margin-bottom: 20px;
+	}
+	@include phone-XL {
+		width: 190px;
+	}
+	@include phone-L {
+		width: 175px;
+		line-height: 23px;
+	}
+	@include phone-M {
+		width: 160px;
+	}
+	@include phone-S {
+		width: 130px;
+		font-size: 12px;
+	}
 }
 
 .features__item-bg {
 	width: 100%;
 	height: 100%;
-	margin-bottom: 10px;
 }

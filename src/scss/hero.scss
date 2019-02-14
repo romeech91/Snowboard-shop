@@ -28,12 +28,11 @@
 	color: #fff;
 	font-size: 80px;
 	margin-bottom: 30px;
-	@include phone-XL {
-		font-size: 59px;
+
+	@include all_phones {
+		font-size: 47px;
 	}
-	@include phone-S {
-		font-size: 42px;
-	}
+
 }
 
 .details-btn {

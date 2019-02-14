@@ -3,6 +3,9 @@
 	background-color: #000;
 	height: 110px;
 	width: 100%;
+	@include all_phones {
+		height: 80px;
+	}
 }
 
 .header-logo {
@@ -91,7 +94,7 @@
 .hamb-menu {
 	display: none;
 	border: none;
-	z-index: 109;
+	z-index: 110;
 	outline: none;
 	width: 70px;
 	height: 70px;
@@ -125,7 +128,7 @@
 		content: "";
 		width: 40px;
 		height: 4px;
-		top: 42px;
+		top: 28px;
 		background-color: #fff;
 		-webkit-transition: all .2s ease-in-out;
 		-moz-transition: all .2s ease-in-out;
@@ -142,7 +145,7 @@
 		content: "";
 		width: 40px;
 		height: 4px;
-		top: 64px;
+		top: 48px;
 		background-color: #fff;
 		-webkit-transition: all .2s ease-in-out;
 		-moz-transition: all .2s ease-in-out;
@@ -158,7 +161,7 @@
 
 .hamb-menu--active span:before {
 	background-color: #fff;
-	top: 54px;
+	top: 36px;
 	-webkit-transform: rotate(-45deg);
 	-moz-transform: rotate(-45deg);
 	-ms-transform: rotate(-45deg);
@@ -168,7 +171,7 @@
 
 .hamb-menu--active span:after {
 	background-color: #fff;
-	top: 54px;
+	top: 36px;
 	-webkit-transform: rotate(+45deg);
 	-moz-transform: rotate(+45deg);
 	-ms-transform: rotate(+45deg);
@@ -177,15 +180,20 @@
 }
 
 .hidden-menu {
-	display: none;
+	display: block;
 	width: 100%;
-	height: 30%;
+	height: 0;
 	overflow: hidden;
 	z-index: 101;
 	background-color: cornflowerblue;
 	position: absolute;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-ms-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
 	&--active {
-		display: block;
+		height: 30%;
 	}
 }
 
