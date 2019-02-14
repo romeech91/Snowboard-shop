@@ -91,7 +91,7 @@
 .hamb-menu {
 	display: none;
 	border: none;
-	z-index: 100;
+	z-index: 109;
 	outline: none;
 	width: 70px;
 	height: 70px;
@@ -181,6 +181,7 @@
 	width: 100%;
 	height: 30%;
 	overflow: hidden;
+	z-index: 101;
 	background-color: cornflowerblue;
 	position: absolute;
 	&--active {
