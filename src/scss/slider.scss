@@ -1,5 +1,5 @@
 .slider {
-	min-height: 900px;
+	min-height: 840px;
 	padding: 50px 0;
 	@include phone-S {
 		min-height: 740px;
@@ -18,7 +18,7 @@
 
 .slides {
 	width: 100%;
-	height: 500px;
+	height: 450px;
 }
 
 .slick-slide {

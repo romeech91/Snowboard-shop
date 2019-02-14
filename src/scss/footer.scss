@@ -7,6 +7,9 @@
 		padding: 40px 0;
 		height: 330px;
 	}
+	@include all_phones {
+		height: 550px;
+	}
 }
 
 .products__list {
@@ -16,11 +19,22 @@
 .menu {
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 50px;
+	@include all_phones {
+		justify-content: center;
+		flex-direction: column;
+		margin-bottom: 20px;
+	}
 }
 
 .menu__list {
 	display: flex;
 	flex-direction: column;
+	@include all_phones {
+		&:first-child {
+			display: none;
+		}
+	}
 }
 
 .menu__item {
@@ -55,16 +69,20 @@
 	@include tablets {
 		font-size: 14px;
 	}
+	@include all_phones {
+		margin-bottom: 0;
+		font-size: 16px;
+	}
 }
 
 .footer__bottom-side {
 	display: flex;
-	margin-top: 50px;
 	justify-content: space-between;
 	text-transform: none;
 	font-size: 14px;
 	font-weight: 400;
 	color: #fff;
+
 }
 
 .mail {
@@ -81,16 +99,17 @@
 		height: 42px;
 		width: 58px;
 		text-transform: uppercase;
-		border: none;
 		margin-left: -4px;
 		font-weight: bold;
+		border: 1px solid #fff;
 		@include tablets {
 			height: 35px;
-			margin-bottom: 30px;
 		}
 	}
-
 	margin-bottom: 60px;
+	@include all_phones {
+		margin-bottom: 10px;
+	}
 }
 
 .socials__list {
@@ -98,6 +117,9 @@
 	flex-direction: row;
 	width: 100%;
 	justify-content: space-between;
+	@include all_phones {
+		width: 60%;
+	}
 }
 
 .socials__item {
@@ -110,4 +132,10 @@
 
 .socials__icon {
 	width: 52px;
+}
+
+.footer__region {
+	@include all_phones {
+		display: none;
+	}
 }
