@@ -7,11 +7,19 @@ $(document).ready(function(){
 		arrows: true,
 		responsive: [
 			{
+				breakpoint: 1024,
+				settings: {
+					arrows: false,
+					centerMode: true,
+					centerPadding: '10px',
+					slidesToShow: 3
+				}
+			},{
 				breakpoint: 768,
 				settings: {
 					arrows: false,
 					centerMode: true,
-					centerPadding: '75px',
+					centerPadding: '50px',
 					slidesToShow: 3
 				}
 			},

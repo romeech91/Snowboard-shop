@@ -34,7 +34,7 @@ let path = {
 	},
 	watch: {
 		html: 'src/**/*.html',
-		js: 'src/*.js',
+		js: 'src/**/*.js',
 		style: 'src/**/*.scss',
 		img: 'src/img/**/*.*',
 		fonts: 'src/fonts/**/*.*'
@@ -49,7 +49,7 @@ let config = {
 	tunnel: true,
 	host: 'localhost',
 	port: 9000,
-	logPrefix: 'frontend-live'
+	logPrefix: 'LIVESERVER:DEMO'
 };
 
 gulp.task('html', function () {
