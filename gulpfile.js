@@ -49,7 +49,7 @@ let config = {
 	tunnel: true,
 	host: 'localhost',
 	port: 9000,
-	logPrefix: 'LIVESERVER:DEMO'
+	logPrefix: 'LIVESERVER:LOCALHOST'
 };
 
 gulp.task('html', function () {

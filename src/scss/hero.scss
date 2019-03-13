@@ -5,9 +5,11 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	@include phone-XL {
+	@include all_phones {
 		background-position: right;
+		background-attachment: fixed;
 	}
+
 }
 
 .hero-block {

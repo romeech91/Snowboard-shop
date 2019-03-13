@@ -21,6 +21,7 @@
     width: 100%;
     @include all_phones {
         display: none;
+        font-size: 18px;
     }
 }
 
@@ -65,6 +66,10 @@
 .header__link {
     text-decoration: none;
     color: #fff;
+    @include all_phones {
+        text-shadow: -2px 1px #673AB7;
+    }
+    
 }
 
 .search-icon {
