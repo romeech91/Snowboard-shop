@@ -7,7 +7,7 @@
 	justify-content: center;
 	@include all_phones {
 		background-position: right;
-		background-attachment: fixed;
+		background-attachment: scroll;
 	}
 
 }
