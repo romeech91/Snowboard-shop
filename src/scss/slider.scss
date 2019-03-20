@@ -63,6 +63,10 @@
 	display: block;
 }
 
+.slick-current .buy-button {
+	display: block;
+}
+
 .slick-slide img {
 	@include tablets {
 		margin: 0 auto;
@@ -78,6 +82,7 @@
 	padding: 5px;
 	border-radius: 5px;
 	text-transform: uppercase;
+	display: none;
 	color: #fff;
 	font-weight: 600;
 	&:hover {
