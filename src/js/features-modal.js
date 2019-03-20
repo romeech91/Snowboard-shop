@@ -1,15 +1,18 @@
-const items = document.querySelectorAll('.features__item');
-const featuresList = document.querySelector('.features__list');
+const items = document.querySelectorAll('.features__item');  //li
+const featuresList = document.querySelector('.features__list');  //ul
 
 items.forEach(element => {
+
     element.addEventListener('click', function(event) {
         let current = event.target;
+
         let currentImage = current.firstElementChild.firstElementChild;
         let currentDescription = current.lastElementChild.textContent;
         let currentSRC = currentImage.currentSrc;
         let newWindow = document.createElement('div');
         let closeBtn = document.createElement('div');
         let articleHeading = document.createElement('h4');
+
         articleHeading.classList.add('article-heading');
         articleHeading.textContent = currentDescription;
         featuresList.appendChild(newWindow);
@@ -26,15 +29,10 @@ items.forEach(element => {
         articleDesc.classList.add('article-text');
         articleDesc.textContent = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolore ducimus eius eum, itaque laboreminima nemo nulla odio, odit pariatur placeat quidem recusandae saepe sed suscipit veritatis, voluptatibusvoluptatum ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolore ducimus eius eum, itaque laboreminima nemo nulla odio, odit pariatur placeat quidem recusandae saepe sed suscipit veritatis, voluptatibusvoluptatum ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolore ducimus eius eum, itaque laboreminima nemo nulla odio, odit pariatur placeat quidem recusandae saepe sed suscipit veritatis, voluptatibusvoluptatum ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolore ducimus eius eum, itaque laboreminima nemo nulla odio, odit pariatur placeat quidem recusandae saepe sed suscipit veritatis, voluptatibusvoluptatum ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolore ducimus eius eum, itaque laboreminima nemo nulla odio, odit pariatur placeat quidem recusandae saepe sed suscipit veritatis, voluptatibusvoluptatum ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolore ducimus eius eum, itaque laboreminima nemo nulla odio, odit pariatur placeat quidem recusandae saepe sed suscipit veritatis, voluptatibusvoluptatum ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolore ducimus eius eum, itaque laboreminima nemo nulla odio, odit pariatur placeat quidem recusandae saepe sed suscipit veritatis, voluptatibusvoluptatum.';
         newWindow.appendChild(articleDesc);
+
         closeBtn.addEventListener('click', function () {
             featuresList.removeChild(newWindow);
         })
     })
 });
 
-// items.forEach(el => {
-//     el.addEventListener('click', function(e) {
-//         let curr = e.target;
-//         console.log(curr.firstElementChild.firstElementChild);
-//     })
-// });

@@ -36,6 +36,7 @@
 	height: 35px;
 	position: relative;
 	display: none;
+	margin-bottom: 15px;
 	@include phone-XL {
 		text-align: center;
 		left: 0;
@@ -68,5 +69,24 @@
 	}
 	@include phone-XL {
 		margin: 0 auto;
+	}
+}
+
+.buy-button {
+	border: 1px solid red;
+	background-color: #ff4500;
+	padding: 5px;
+	border-radius: 5px;
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 600;
+	&:hover {
+		border: 1px solid red;
+		color: #000;
+		-webkit-transition: .3s;
+		-moz-transition: .3s;
+		-ms-transition: .3s;
+		-o-transition: .3s;
+		transition: .3s;
 	}
 }
