@@ -30,7 +30,6 @@ $(document).ready(function(){
 					centerMode: true,
 					centerPadding: '50px',
 					slidesToShow: 1,
-					autoplay: true,
 					autoplaySpeed: 1000
 				}
 			}

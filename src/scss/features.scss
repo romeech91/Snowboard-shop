@@ -66,6 +66,10 @@
 	}
 }
 
+.features__block-article {
+	display: none;
+}
+
 .features__block-text {
 	text-transform: none;
 	line-height: 30px;
@@ -96,7 +100,7 @@
 
 .features-article {
 	width: 100%;
-	height: 100%;
+	height: fit-content;
 	padding: 15px;
 	border: 1px solid #00dcff;
 	position: absolute;
@@ -122,14 +126,14 @@
 }
 
 .image-content {
-	width: 40%;
-	height: 60%;
+	width: 200px;
+	height: 130px;
 	float: left;
 	margin-right: 15px;
 	margin-bottom: 15px;
 	@include all_phones {
 		width: 100%;
-		height: 25%;
+		height: 200px;
 	}
 }
 
