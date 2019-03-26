@@ -3,6 +3,7 @@
 .slick-slider {
     position: relative;
     display: block;
+    left: -14px;
     box-sizing: border-box;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -13,6 +14,9 @@
     -ms-touch-action: pan-y;
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
+    @include all_phones {
+        left: 0;
+    }
 }
 .slick-list {
     position: relative;

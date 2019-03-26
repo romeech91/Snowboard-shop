@@ -3,7 +3,7 @@ $(document).ready(function(){
 	$('.slider__container').slick({
 		centerMode: true,
 		centerPadding: '80px',
-		slidesToShow: 3.5,
+		slidesToShow: 4.3,
 		arrows: true,
 		responsive: [
 			{

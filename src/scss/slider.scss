@@ -30,7 +30,6 @@
 }
 
 .slide__desc {
-	left: -25px;
 	top: 20px;
 	overflow: auto;
 	height: 35px;
@@ -94,4 +93,11 @@
 		-o-transition: .3s;
 		transition: .3s;
 	}
+}
+
+.slide {
+	width: 100%;
+	flex-direction: column;
+	display: flex !important;
+	align-items: center;
 }

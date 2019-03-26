@@ -3,6 +3,7 @@ const featuresList = document.querySelector('.features__list');
 
 featuresButtons.forEach(btn => {
 	btn.addEventListener('click', evt => {
+		evt.preventDefault();
 		let current = event.target;
 		let createModal = function () {
 			let currentImage = current.firstElementChild.firstElementChild;
