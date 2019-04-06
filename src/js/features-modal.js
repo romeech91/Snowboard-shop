@@ -1,3 +1,5 @@
+//modal window create/show/delete
+
 const featuresButtons = document.querySelectorAll('.features__item');
 const featuresList = document.querySelector('.features__list');
 
@@ -51,3 +53,24 @@ featuresButtons.forEach(btn => {
 		}
 	})
 });
+
+
+//tabs content 
+
+function openTab(evt, tabName) {
+	var i, tabcontent;
+
+	// Get all elements with class="tabcontent" and hide them
+	tabcontent = document.getElementsByClassName('features__list');
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+
+	// Show the current tab, and add an "active" class to the button that opened the tab
+	let activeTab = document.getElementById(tabName);
+	activeTab.style.display = 'flex';
+	console.log(evt);
+}
+
+document.getElementById("defaultOpen").click();
+

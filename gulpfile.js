@@ -64,7 +64,6 @@ gulp.task('js', () => {
 		.pipe(rigger())
 		.pipe(babel({presets: ['@babel/env']}))
 		.pipe(sourcemaps.init())
-		.pipe(uglify())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(path.build.js))
 		.pipe(reload({stream: true}));
@@ -75,12 +74,11 @@ gulp.task('style', () => {
 		.pipe(sourcemaps.init())
 		.pipe(sass())
 		.pipe(prefixer())
-		.pipe(cssmin())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(path.build.css))
 		.pipe(reload({stream: true}));
 });
-
+//css min deleted
 gulp.task('img', function () {
 	gulp.src(path.src.img)
 		.pipe(imagemin({

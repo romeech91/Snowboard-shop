@@ -10,16 +10,6 @@
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="animate.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script
-		src="https://code.jquery.com/jquery-3.3.1.min.js"
-		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-		crossorigin="anonymous"></script>
-	<script type="text/javascript" src="slick/slick.min.js"></script>
-	<script src="preloader.js" defer></script>
-	<script src="wow.min.js"></script>
-	<script>
-		new WOW().init();
-	</script>
 </head>
 <body>
 	<div class="loaderArea">
@@ -146,8 +136,16 @@
 				<div class="section-cross">
 					<img src="img/icons/cross.png" alt="cross icon">
 				</div>
-				<ul class="features__list">
-					<li class="features__item wow fadeInDown">
+				<ul class="features__tabs">
+					<li class="features__tab">
+						<button id="defaultOpen" class="features__button recent" onclick="openTab(event, 'recent')">Recent</button>
+					</li>
+					<li class="features__tab">
+						<button class="features__button fests" onclick="openTab(event, 'fests')">Festivals</button>
+					</li>
+				</ul>
+				<ul id="recent" class="features__list features--recent">
+					<li class="features__item">
 						<div class="features__block">
 							<img src="img/features/config.png" alt="" class="features__item-bg">
 						</div>
@@ -157,7 +155,7 @@
 							laboriosam natus nostrum numquam perferendis quasi reiciendis, suscipit totam Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit
 							tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis!.</p>
 					</li>
-					<li class="features__item wow fadeInDown">
+					<li class="features__item">
 						<div class="features__block">
 							<img src="img/features/snow.png" alt="" class="features__item-bg">
 						</div>
@@ -165,7 +163,7 @@
 						<p class="features__block-article">Jeremy Jones text: Lorem ipsum dolor sit amet, consectetur adipisicing 	elit. Adipisci culpa delectus ducimus est exercitationem facilis hic laboriosam quasi quisquam sint? Earum et libero omnis quam quibusdam repellendus ut! Delectus, fugiat Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis!
 						</p>
 					</li>
-					<li class="features__item wow fadeInDown">
+					<li class="features__item">
 						<div class="features__block">
 							<img src="img/features/street-grind.png" alt="" class="features__item-bg">
 						</div>
@@ -173,7 +171,7 @@
 						<p class="features__block-article">Burton Tokyo Rail text: Lorem ipsum dolor sit amet, consectetur
 							adipisicing elit. Consequuntur explicabo id neque qui quod totam! Architecto autem consectetur deleniti eos esse ex harum, magni nulla numquam quasi, rerum tempore vero Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis!.</p>
 					</li>
-					<li class="features__item wow fadeInDown">
+					<li class="features__item">
 						<div class="features__block">
 							<img src="img/features/tokyo-rail.png" alt="" class="features__item-bg">
 						</div>
@@ -182,38 +180,71 @@
 							adipisicing elit. Amet tempore, ullam? Dolore dolorum hic inventore magnam, magni modi nobis nostrum
 							nulla officia perspiciatis possimus quaerat quo quos unde, vel, veritatis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis!?</p>
 					</li>
-					<li class="features__item wow fadeInUp">
+				</ul>
+				<ul id="fests" class="features__list features--fests">
+					<li class="features__item">
 						<div class="features__block">
 							<img src="img/features/beer.png" alt="" class="features__item-bg">
 						</div>
 						<span class="features__block-text">Extreme Beer Riding</span>
-						<p class="features__block-article">Extreme beer text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet, blanditiis consequatur eius eveniet facere, in ipsa iste iure magnam nobis, voluptatum. Aliquid excepturi fugiat illo! Distinctio enim provident saepe Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis!.
+						<p class="features__block-article">Extreme beer text: Lorem ipsum dolor sit amet, consectetur adipisicing
+							elit. Aliquid amet, blanditiis consequatur eius eveniet facere, in ipsa iste iure magnam nobis,
+							voluptatum. Aliquid excepturi fugiat illo! Distinctio enim provident saepe Lorem ipsum dolor sit amet,
+							consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit
+							tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis!Lorem ipsum
+							dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi
+							suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis!.
 						</p>
 					</li>
-					<li class="features__item wow fadeInUp">
+					<li class="features__item">
 						<div class="features__block">
 							<img src="img/features/fest.jpg" alt="" class="features__item-bg">
 						</div>
 						<span class="features__block-text">Snowboard Fest Camp</span>
 						<p class="features__block-article">Fest Camp text: Lorem ipsum dolor sit amet, consectetur adipisicing
 							elit. Animi aperiam doloremque ea expedita illum ipsa iusto laudantium magni, minima minus praesentium
-							quidem recusandae, repellendus, sint sunt? Cupiditate expedita libero minus Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis!
+							quidem recusandae, repellendus, sint sunt? Cupiditate expedita libero minus Lorem ipsum dolor sit amet,
+							consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit
+							tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis Lorem ipsum
+							dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi
+							suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis!
 						</p>
 					</li>
-					<li class="features__item wow fadeInUp">
+					<li class="features__item">
 						<div class="features__block">
 							<img src="img/features/fly.png" alt="" class="features__item-bg">
 						</div>
 						<span class="features__block-text">Flying Riders</span>
-						<p class="features__block-article">Flying Riders text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis!
+						<p class="features__block-article">Flying Riders text: Lorem ipsum dolor sit amet, consectetur adipisicing
+							elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit tenetur? Adipisci amet
+							asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis! Lorem ipsum dolor sit amet,
+							consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit
+							tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis Lorem ipsum
+							dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi
+							suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis Lorem
+							ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro,
+							sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio
+							porro, sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem
+							reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo
+							minus odio porro, sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque
+							quidem reiciendis!
 						</p>
 					</li>
-					<li class="features__item wow fadeInUp">
+					<li class="features__item">
 						<div class="features__block">
 							<img src="img/features/fest-cover.jpg" alt="" class="features__item-bg">
 						</div>
 						<span class="features__block-text">Snowboard Fest Poster</span>
-						<p class="features__block-article">SB Fest text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid atque enim fugiat, illum neque placeat repellat voluptate? Ab deserunt dignissimos et excepturi nam, officiis omnis porro quod recusandae sapiente totam Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis!.
+						<p class="features__block-article">SB Fest text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							Aliquid atque enim fugiat, illum neque placeat repellat voluptate? Ab deserunt dignissimos et excepturi
+							nam, officiis omnis porro quod recusandae sapiente totam Lorem ipsum dolor sit amet, consectetur
+							adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit tenetur? Adipisci
+							amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis! Lorem ipsum dolor sit amet,
+							consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi suscipit
+							tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis! Lorem ipsum
+							dolor sit amet, consectetur adipisicing elit. Aperiam dolore eligendi facilis illo minus odio porro, sequi
+							suscipit tenetur? Adipisci amet asperiores, deleniti dolorem enim modi nemo neque quidem reiciendis!.
 						</p>
 					</li>
 				</ul>
@@ -288,6 +319,14 @@
 			</div>
 		</section>
 	</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="preloader.js" defer></script>
+<script src="wow.min.js"></script>
+<script>
+	new WOW().init();
+</script>
 <script src="index.js"></script>
 </body>
 </html>
